@@ -1,0 +1,38 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+#rotation {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 250px);
+    width: 300px;
+    height: 300px;
+}
+
+.square {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: red;
+}
+.menu{
+    position: absolute;
+    top: 5px;
+    left: 50px;
+    font-size: 200px;
+    font-style: bold;
+    text-align: center;
+    color: white;
+}
+.square:hover {
+    background: blue;
+    animation: rotation 2s ease 0s 1 alternate forwards;
+}
+
+@keyframes rotation {
+    0% { transform: scale(1);}
+    /* 50% { transform: scale(.6) rotate(-45deg); } */
+    100% { transform: scale(1) rotate(360deg); } 
+}
